@@ -1,13 +1,14 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/iframe-test',
   resolve: {
     alias: [
-      { find: "@components", replacement: "/src/components" },
-      { find: "@", replacement: "/src" },
+      { find: '@components', replacement: '/src/components' },
+      { find: '@', replacement: '/src' },
     ],
   },
-})
+});

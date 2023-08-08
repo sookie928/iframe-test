@@ -7,11 +7,14 @@
     "dev": "vite  --port 3000",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://sookie928.github.io/iframe-test",
   "dependencies": {
     "@xstate/react": "^3.2.2",
     "clsx": "^2.0.0",
+    "gh-pages": "^5.0.0",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

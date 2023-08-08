@@ -161,7 +161,7 @@ function App() {
 
   return (
     <div className='w-screen h-screen'>
-      <Model data={SCENE_DATA} modelData={MODEL_DATA} send={send} current={current} uri={'/bt3000a.glb'} />
+      <Model data={SCENE_DATA} modelData={MODEL_DATA} send={send} current={current} uri={'https://bluebeaker.blob.core.windows.net/public/3d/bt3000a.glb'} />
     </div>
   );
 }
