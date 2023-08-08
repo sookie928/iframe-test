@@ -55,7 +55,7 @@ export class Content {
       );
     else this.shadow.update();
 
-    return await this.setEnvMap();
+   return await this.setEnvMap();
   }
 
   private initLights() {
@@ -154,7 +154,8 @@ export class Content {
     const tex = new THREE.WebGLCubeRenderTarget(1024, {
       format: THREE.RGBAFormat,
       generateMipmaps: true,
-     // encoding: THREE.sRGBEncoding,
+      // encoding: THREE.sRGBEncoding,
+      colorSpace: THREE.SRGBColorSpace,
       wrapS: THREE.ClampToEdgeWrapping,
       wrapT: THREE.ClampToEdgeWrapping,
       type: THREE.HalfFloatType,
@@ -163,7 +164,8 @@ export class Content {
     const envMap = new THREE.WebGLCubeRenderTarget(1024, {
       format: THREE.RGBAFormat,
       generateMipmaps: true,
-     // encoding: THREE.sRGBEncoding,
+      // encoding: THREE.sRGBEncoding,
+      colorSpace: THREE.SRGBColorSpace,
       wrapS: THREE.ClampToEdgeWrapping,
       wrapT: THREE.ClampToEdgeWrapping,
       type: THREE.HalfFloatType,
@@ -187,7 +189,7 @@ export class Content {
 
     virtualScene.add(cubeCamera);
     virtualScene.add(sphereMesh);
-console.log()
+    console.log();
     //  this.viewer.virtualScene.add(cubeCamera)
     this.envMap = (target as any).texture; //
     this.viewer.scene.environment = cubeCamera.renderTarget.texture;

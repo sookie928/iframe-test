@@ -29,44 +29,11 @@ const SCENE_DATA = {
   scene: {
     lights: {
       main: {
-        intensity: 2.8,
+        intensity: 1,
         color: '#ffffff',
         position: [5, 0.5, 5],
       },
-      sides: [
-        {
-          type: 'directional',
-          name: 'side01',
-          intensity: 2.8,
-          color: '#ffffff',
-          position: [5, -5, 5],
-          shadow: {
-            near: 0.1,
-            far: 100,
-            left: -100,
-            right: 100,
-            top: 100,
-            bottom: -100,
-            bias: 0.0001,
-          },
-        },
-        {
-          type: 'directional',
-          name: 'side51',
-          intensity: 2.8,
-          color: 16777215,
-          position: [-0.48796387835032934, 0, 0.4239126217737621],
-          shadow: {
-            near: 0.1,
-            far: 100,
-            left: -100,
-            right: 100,
-            top: 100,
-            bottom: -100,
-            bias: 0.0001,
-          },
-        },
-      ],
+      sides: [],
     },
   },
   shadow: {
@@ -86,8 +53,8 @@ const SCENE_DATA = {
     },
   },
   background: {
-    color1: '#1c1c1e',
-    color2: '#1c1c1e',
+    color1: '0x1dcde1',
+    color2: '0x5c5c5c',
     aspectCorrection: false,
     aspect: 1,
     offset: [0, 0],
@@ -160,8 +127,14 @@ function App() {
   const [current, send] = useMachine(libMachine);
 
   return (
-    <div className='w-screen h-screen'>
-      <Model data={SCENE_DATA} modelData={MODEL_DATA} send={send} current={current} uri={'https://bluebeaker.blob.core.windows.net/public/3d/bt3000a.glb'} />
+    <div className="w-screen h-screen">
+      <Model
+        data={SCENE_DATA}
+        modelData={MODEL_DATA}
+        send={send}
+        current={current}
+        uri={'https://bluebeaker.blob.core.windows.net/public/3d/bt3000a.glb'}
+      />
     </div>
   );
 }

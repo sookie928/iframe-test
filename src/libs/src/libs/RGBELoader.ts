@@ -6,9 +6,9 @@
 /* eslint-disable prefer-const */
 /* eslint-disable no-var */
 // @ts-nocheck
-import {FloatType, HalfFloatType, LinearEncoding, LinearFilter} from 'three'
+import { FloatType, HalfFloatType, LinearFilter, LinearSRGBColorSpace, SRGBColorSpace } from 'three'
 
-import {DataTextureLoader} from './DataTextureLoader'
+import { DataTextureLoader } from './DataTextureLoader'
 import * as DataUtils from './DataUtils'
 
 // https://github.com/mrdoob/three.js/issues/5552
@@ -408,7 +408,7 @@ class RGBELoader extends DataTextureLoader {
       switch (texture.type) {
         case FloatType:
         case HalfFloatType:
-          texture.encoding = LinearEncoding
+          texture.colorSpace = LinearSRGBColorSpace
           texture.minFilter = LinearFilter
           texture.magFilter = LinearFilter
           texture.generateMipmaps = false
@@ -424,4 +424,4 @@ class RGBELoader extends DataTextureLoader {
   }
 }
 
-export {RGBELoader}
+export { RGBELoader }
