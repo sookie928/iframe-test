@@ -1,10 +1,6 @@
-import React, {FC} from 'react'
+import { FC } from 'react';
 
-const Up: FC<{style?: string; onClick?: any; [key: string]: any}> = ({
-  style,
-  onClick,
-  ...props
-}) => {
+const Up: FC<{ style?: string; onClick?: any; [key: string]: any }> = ({ style, onClick }) => {
   return (
     <svg
       className={style}
@@ -17,7 +13,7 @@ const Up: FC<{style?: string; onClick?: any; [key: string]: any}> = ({
     >
       <path stroke="#fff" strokeLinecap="round" d="M6 14l5-5 5 5"></path>
     </svg>
-  )
-}
+  );
+};
 
-export default Up
+export default Up;

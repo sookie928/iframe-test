@@ -53,7 +53,7 @@ export class Editor extends Viewer {
         if (this.mainView)
           (this.mainView.control as OrbitControls).enabled = !event.value
       })
-      t.addEventListener('change', (ttr) => {
+      t.addEventListener('change', () => {
         this.needsUpdate = true
       })
       //???

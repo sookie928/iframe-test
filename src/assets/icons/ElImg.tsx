@@ -1,11 +1,11 @@
-import React, {FC} from 'react'
+import  {FC} from 'react'
 
 const ElImg: FC<{
   className?: string
   style?: any
   onClick?: any
   [key: string]: any
-}> = ({className, style, onClick, ...props}) => {
+}> = ({className, style, onClick}) => {
   return (
     <svg
       onClick={onClick}

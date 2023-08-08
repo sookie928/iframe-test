@@ -310,7 +310,7 @@ export const libMachine = createMachine(
       },
       sendToPause: sendTo((ctx) => ctx.mixerRef, { type: 'PAUSE' }),
       sendToStart: sendTo((ctx) => ctx.mixerRef, { type: 'START' }),
-      playAllAnimation: (ctx, evt) => {
+      playAllAnimation: (ctx) => {
         if (ctx.viewer && ctx.animations) {
           ctx.viewer.playAnimation('clip');
         }
@@ -338,7 +338,7 @@ export const libMachine = createMachine(
           ctx.viewer.mainView?.control?.update();
         }
       },
-      initEnv: (ctx) => {
+      initEnv: () => {
         //  if (ctx.viewer) ctx.viewer.setEditorEnv()
       },
       setCorrection: (ctx) => {
@@ -458,7 +458,7 @@ export const libMachine = createMachine(
           });
         }
       },
-      setShadow: (ctx) => {
+      setShadow: () => {
         //   ctx.viewer
       },
       setIOR: assign((ctx) => {
@@ -486,7 +486,7 @@ export const libMachine = createMachine(
       transformIOR: (ctx, evt) => {
         if (ctx.viewer && ctx.selected && ctx.viewer.data) {
           if (!ctx.viewer.data.ior || ctx.viewer.data.ior.isMaterial) ctx.viewer.data.ior = {};
-          const i = ctx.viewer.data.ior[((ctx.selected as THREE.Mesh).material as THREE.Material).name];
+          // const i = ctx.viewer.data.ior[((ctx.selected as THREE.Mesh).material as THREE.Material).name];
           if (!ctx.viewer.data.ior[((ctx.selected as THREE.Mesh).material as THREE.Material).name])
             ctx.viewer.data.ior[((ctx.selected as THREE.Mesh).material as THREE.Material).name] = {
               name: ((ctx.selected as THREE.Mesh).material as THREE.Material).name,
@@ -568,7 +568,7 @@ export const libMachine = createMachine(
           }
         }
       },
-      setLimit: (ctx) => {
+      setLimit: () => {
         // ctx.viewer
       },
       transformEnv: (ctx, evt) => {
@@ -605,7 +605,7 @@ export const libMachine = createMachine(
           ctx.viewer.changeEnvMap(evt.value);
         }
       },
-      setEnv: (ctx) => {
+      setEnv: () => {
         //ctx.viewer
       },
       initViewer: assign((_, { container, data, options, doms, loadingCallback }) => ({

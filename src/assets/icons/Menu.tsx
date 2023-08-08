@@ -1,10 +1,9 @@
-import {twclsx} from 'libs/utils'
-import React, {FC} from 'react'
+import {twclsx} from '@/libs/utils'
+import  {FC} from 'react'
 
 const Menu: FC<{style?: string; onClick?: any; [key: string]: any}> = ({
   style,
   onClick,
-  ...props
 }) => {
   return (
     <svg

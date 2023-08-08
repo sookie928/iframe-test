@@ -1,10 +1,6 @@
-import React, {FC} from 'react'
+import { FC } from 'react';
 
-const UpSelect: FC<{className?: string; onClick?: any; [key: string]: any}> = ({
-  className,
-  onClick,
-  ...props
-}) => {
+const UpSelect: FC<{ className?: string; onClick?: any; [key: string]: any }> = ({ className, onClick }) => {
   return (
     <svg
       className={className}
@@ -17,7 +13,7 @@ const UpSelect: FC<{className?: string; onClick?: any; [key: string]: any}> = ({
     >
       <path fill="#525158" d="M4 0L.536 6h6.928L4 0z"></path>
     </svg>
-  )
-}
+  );
+};
 
-export default UpSelect
+export default UpSelect;

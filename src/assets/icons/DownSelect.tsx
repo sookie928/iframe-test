@@ -1,10 +1,10 @@
-import React, {FC} from 'react'
+import  {FC} from 'react'
 
 const DownSelect: FC<{
   className?: string
   onClick?: any
   [key: string]: any
-}> = ({className, onClick, ...props}) => {
+}> = ({className, onClick}) => {
   return (
     <svg
       className={className}

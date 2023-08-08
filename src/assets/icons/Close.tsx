@@ -1,10 +1,6 @@
-import React, {FC} from 'react'
+import { FC } from 'react';
 
-const Close: FC<{className?: string; onClick?: any; [key: string]: any}> = ({
-  className,
-  onClick,
-  ...props
-}) => {
+const Close: FC<{ className?: string; onClick?: any; [key: string]: any }> = ({ className, onClick }) => {
   return (
     <svg
       fill="none"
@@ -24,7 +20,7 @@ const Close: FC<{className?: string; onClick?: any; [key: string]: any}> = ({
         d="M31.25 8.75l-22.5 22.5M31.25 31.25L8.75 8.75"
       ></path>
     </svg>
-  )
-}
+  );
+};
 
-export default Close
+export default Close;

@@ -900,7 +900,7 @@ export class Viewer {
     }
   }
 
-  startAt(time: any, clip: any) {
+  startAt(time: any) {
     if (this.clips.length > 0) {
       const clip = _.find(this.animations, (o: any) => o.name === name)
       clip && this.mixer.clipAction(clip).reset().play()

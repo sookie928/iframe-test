@@ -16,7 +16,7 @@ interface ITimelineProps {
 }
 const Timeline: FC<ITimelineProps> = ({
   intro,
-  actions,
+ // actions,
   send,
   current,
   play,

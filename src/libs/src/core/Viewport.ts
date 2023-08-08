@@ -97,7 +97,7 @@ export class View {
           this.viewer.scene.add(this.controlHelper)
           this.setControlLimit(undefined)
           // c.update();
-          c.addEventListener('change', (e: any) => {
+          c.addEventListener('change', () => {
             this.controlHelper && this.controlHelper.position.copy(c.target)
             this.viewer.needsUpdate = true
           })

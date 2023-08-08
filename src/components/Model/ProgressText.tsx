@@ -1,5 +1,5 @@
-import {twclsx} from '@/libs/utils'
-import {FC, ForwardedRef, ReactNode, forwardRef, memo} from 'react'
+import { twclsx } from '@/libs/utils'
+import { FC, ForwardedRef, forwardRef, memo } from 'react'
 
 const ProgressText: FC<{ref: ForwardedRef<HTMLDivElement>}> = memo(
   forwardRef((_, ref: ForwardedRef<HTMLDivElement> | undefined) => {

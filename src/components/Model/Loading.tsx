@@ -1,12 +1,12 @@
 import { useLoadingStore } from '@/libs/stores/useLoadingStore';
 import { twclsx } from '@/libs/utils';
-import { FC, ReactNode, memo, useEffect, useRef, useState } from 'react';
+import { FC, ReactNode, memo, useEffect, useRef } from 'react';
 import Progress from './Progress';
 import ProgressText from './ProgressText';
 
 const Loading: FC<{ children?: ReactNode }> =
   // eslint-disable-next-line react/display-name
-  memo(({ children }) => {
+  memo(({}) => {
     const progressRef = useRef<HTMLDivElement>(null);
     const progressTextRef = useRef<HTMLDivElement>(null);
     const ref = useRef<HTMLDivElement>(null);
@@ -16,7 +16,7 @@ const Loading: FC<{ children?: ReactNode }> =
       useLoadingStore.subscribe((state) => {
         if (progressRef.current && progressTextRef.current && ref.current) {
           const p = `${Math.ceil(state.perc)}%`;
-          ;(progressRef.current as HTMLDivElement).style.width = p;
+          (progressRef.current as HTMLDivElement).style.width = p;
           (progressTextRef.current as HTMLDivElement).innerText = p;
           if (state.perc >= 100 || !state.perc) {
             (ref.current as HTMLDivElement).style.visibility = 'hidden';

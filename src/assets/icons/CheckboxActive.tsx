@@ -1,4 +1,4 @@
-import React, {FC} from 'react'
+import  {FC} from 'react'
 
 const CheckboxActive: FC<{className?: string}> = ({className}) => {
   return (

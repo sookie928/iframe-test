@@ -1,4 +1,4 @@
-import React, {FC} from 'react'
+import  {FC} from 'react'
 
 const CircleFill: FC<{style?: string; onClick?: any; [key: string]: any}> = ({
   style,
