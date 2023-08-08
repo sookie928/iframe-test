@@ -86,8 +86,8 @@ const SCENE_DATA = {
     },
   },
   background: {
-    color1: '0x979799',
-    color2: '0x2e2d31',
+    color1: '#1c1c1e',
+    color2: '#1c1c1e',
     aspectCorrection: false,
     aspect: 1,
     offset: [0, 0],
