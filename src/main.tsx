@@ -2,9 +2,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Select from './pages/Select';
 import Font from './pages/Font';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: '/',
