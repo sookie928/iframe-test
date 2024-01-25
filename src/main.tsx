@@ -18,8 +18,6 @@ const router = createHashRouter(
       path: '/select',
       element: <Select />,
     },
-  ],
-  { basename: '/iframe-test' }
-);
+  ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(<RouterProvider router={router} />);
