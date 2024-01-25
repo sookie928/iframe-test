@@ -19,7 +19,7 @@ const ObjectToZoom: FC<{ scene: THREE.Group; data: any }> = ({ scene, data }) =>
     objects &&
     objects.map((o, i) => (
       <Billboard key={i} {...o} position={[o.position.x, o.position.y, o.position.z + 0.15]} follow>
-        <Image name={o.name} url="/img/plus.webp" transparent scale={[0.3, 0.3]} />
+        <Image name={o.name} url="/iframe-test/img/plus.webp" transparent scale={[0.3, 0.3]} />
       </Billboard>
     ))
   );
