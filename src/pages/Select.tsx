@@ -54,7 +54,7 @@ const data = {
 };
 
 const Select: FC<object> = () => {
-  const { scene } = useGLTF('https://medmapb2b.blob.core.windows.net/show/model/place/1/1.glb', true);
+  const { scene } = useGLTF('https://bluebeaker.blob.core.windows.net/public/3d/1.glb', true);
   return (
     <div className="w-screen h-screen">
       <Canvas camera={{ position: [0, 20, 80], fov: 50 }} dpr={[1, 2]} color="transparent">
@@ -73,4 +73,4 @@ const Select: FC<object> = () => {
   );
 };
 export default Select;
-useGLTF.preload('https://medmapb2b.blob.core.windows.net/show/model/place/1/1.glb');
+useGLTF.preload('https://bluebeaker.blob.core.windows.net/public/3d/1.glb');

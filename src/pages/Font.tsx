@@ -53,7 +53,7 @@ import { FC, Suspense } from 'react';
 // };
 
 const Font: FC<object> = () => {
-  const { scene } = useGLTF('https://medmapb2b.blob.core.windows.net/show/model/place/1/1.glb', true);
+  const { scene } = useGLTF('https://bluebeaker.blob.core.windows.net/public/3d/1.glb', true);
 
   return (
     <div className="w-screen h-screen relative font-pretendard">
@@ -99,4 +99,4 @@ const Font: FC<object> = () => {
   );
 };
 export default Font;
-useGLTF.preload('https://medmapb2b.blob.core.windows.net/show/model/place/1/1.glb');
+useGLTF.preload('https://bluebeaker.blob.core.windows.net/public/3d/1.glb');
